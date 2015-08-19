@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.1/react-with-addons.js"></script>
+@*    <script src="http://fb.me/react-0.13.1.js"></script>*@
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="ui grey item inverted segment">
+        <h1 class="ui header"><i class="icon book"></i>Firebook</h1>
+        <div class="ui inverted secondary pointing menu" style="display:none">
+            <a class="active item">
+                Home
+            </a>
+            <a class="item">
+                Messages
+            </a>
+            <a class="item">
+                Friends
+            </a>
+        </div>
+    </div>
+    <div class="ui container body-content">
+        @RenderBody()
+       
+       
+    </div> <footer><hr />
+            <p>&copy; @DateTime.Now.Year - JonnyDangerous Designs</p>
+        </footer>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/scripts")
+    <script src="@Url.Content("~/Scripts/phoneBook.jsx")"></script>
+    <script src="@Url.Content("~/Scripts/login.jsx")"></script>
+    <script src="@Url.Content("~/Scripts/register.jsx")"></script>
+@RenderSection("scripts", required: false)
+</body>
+</html>
